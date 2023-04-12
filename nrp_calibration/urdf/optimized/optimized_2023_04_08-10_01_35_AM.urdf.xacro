@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<robot name="arm_with_effector" version="1.0">
+  <link name="world"/>
+  <link name="link1"/>
+  <link name="link2"/>
+  <link name="camera1_link"/>
+  <link name="camera2_link"/>
+  <link name="marker_link"/>
+  <link name="camera1_color_optical_frame"/>
+  <link name="camera2_color_optical_frame"/>
+  <joint name="world_link1_joint" type="fixed">
+    <origin xyz="0.1 -0.2 0.3" rpy="0.0 0.0 1.57"/>
+    <parent link="world"/>
+    <child link="link1"/>
+  </joint>
+  <joint name="world_link2_joint" type="fixed">
+    <origin xyz="-0.1 -0.2 0.3" rpy="0.0 0.0 1.57"/>
+    <parent link="world"/>
+    <child link="link2"/>
+  </joint>
+  <joint name="link1_camera1_joint" type="fixed">
+    <origin xyz="4.431718043912645e-16 3.8649023049183353e-16 -2.409145488281006e-16" rpy="1.8682623007737977e-16 -3.2256448229312006e-17 4.3968335405725685e-16"/>
+    <parent link="link1"/>
+    <child link="camera1_link"/>
+  </joint>
+  <joint name="link2_camera1_joint" type="fixed">
+    <origin xyz="-0.09712844279966745 -0.0916290418054798 -0.0028068414234129406" rpy="0.19212526122902607 -0.1703448678537689 -0.041028899517363965"/>
+    <parent link="link2"/>
+    <child link="camera2_link"/>
+  </joint>
+  <joint name="link1_camera1_optical_joint" type="fixed">
+    <parent link="camera1_link"/>
+    <child link="camera1_color_optical_frame"/>
+  </joint>
+  <joint name="link2_camera2_optical_joint" type="fixed">
+    <parent link="camera2_link"/>
+    <child link="camera2_color_optical_frame"/>
+  </joint>
+  <joint name="world_marker_joint" type="fixed">
+    <origin xyz="0.0 0.2 0.3" rpy="1.57 0.0 0.0"/>
+    <parent link="world"/>
+    <child link="marker_link"/>
+  </joint>
+</robot>
