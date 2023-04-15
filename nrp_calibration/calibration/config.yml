@@ -34,7 +34,7 @@ description_file: "package://nrp_calibration/urdf/two_cameras.urdf"
 
 # The calibration framework requires a bagfile to extract the necessary data for the calibration.
 # bag_file: "/root/nrp/data_2023-02-10-18-39-26.bag"
-bag_file: "~/bagfiles/npr/data_2023-02-10-18-39-26.bag"
+bag_file: "~/bagfiles/npr/data_2023-04-14-08-40-36.bag"
 
 # You must define a frame of reference for the optimization process.
 # It must exist in the transformation chains of all the sensors which are being calibrated.
