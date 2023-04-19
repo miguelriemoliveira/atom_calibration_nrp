@@ -145,7 +145,8 @@ calibration_pattern:
 # If your calibration problem is not fully constrained you should anchored one of the sensors.
 # This makes it immovable during the optimization.
 # This is typically referred to as gauge freedom.
-anchored_sensor: "camera1"
+# anchored_sensor: "camera1"
+anchored_sensor: ""
 
 # Max time delta (in milliseconds) between sensor data messages when creating a collection.
 max_duration_between_msgs: 1000
